@@ -1,7 +1,7 @@
 package shapes;
 
 /**
- * A blue triangle.
+ * A triangle.
  * 
  * @author Willow Sapphire
  * @version 09/28/2023
@@ -9,7 +9,9 @@ package shapes;
 public class Triangle extends Shape
 {
     /**
-     * Construct a new blue triangle using triangle as the name.
+     * Construct a new triangle using triangle as the name.
+     * 
+     * @param color the color for the triangle.
      */
     public Triangle(Color color)
     {
