@@ -8,20 +8,8 @@ package shapes;
  */
 public abstract class Shape
 {
-    /**
-     * The name of the color of the shape.
-     */
-    private String color;
 
-    /**
-     * The hex code for the color of the shape.
-     */
-    private int colorHexcode;
-
-    /**
-     * The rgb values for the color of the shape.
-     */
-    private int[] colorRgb;
+    private Color color;
 
     /**
      * The name of the shape.
@@ -33,12 +21,10 @@ public abstract class Shape
      * 
      * @param name the name of the shape.
      */
-    public Shape(String name, String color, int hexcode, int[] rgb)
+    public Shape(String name, Color color)
     {
         this.name = name;
         this.color = color;
-        this.colorHexcode = hexcode;
-        this.colorRgb = rgb;
     }
 
     /**
@@ -56,29 +42,9 @@ public abstract class Shape
      * 
      * @return color.
      */
-    public String getColor()
+    public Color getColor()
     {
         return color;
-    }
-
-    /**
-     * Accessor method for the color hexcode.
-     * 
-     * @return colorHexcode.
-     */
-    public int getColorHexcode()
-    {
-        return colorHexcode;
-    }
-
-    /**
-     * Accessor method for the color rgb values.
-     * 
-     * @return colorRgb.
-     */
-    public int[] getColorRgb()
-    {
-        return colorRgb;
     }
 
     /**
@@ -88,6 +54,6 @@ public abstract class Shape
      */
     public String description()
     {
-        return String.format("A %s %s", color, name);
+        return String.format("A %s %s", color.getName(), name);
     }
 }

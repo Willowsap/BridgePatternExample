@@ -2,12 +2,11 @@ package client;
 
 import java.util.ArrayList;
 
-import shapes.BlueCircle;
-import shapes.BlueSquare;
-import shapes.BlueTriangle;
-import shapes.RedCircle;
-import shapes.RedSquare;
-import shapes.RedTriangle;
+import shapes.Blue;
+import shapes.Red;
+import shapes.Circle;
+import shapes.Square;
+import shapes.Triangle;
 import shapes.Shape;
 
 /**
@@ -26,12 +25,12 @@ public class Demo
     public static void main(String[] args)
     {
         ArrayList<Shape> shapes = new ArrayList<Shape>();
-        shapes.add(new BlueCircle());
-        shapes.add(new BlueSquare());
-        shapes.add(new BlueTriangle());
-        shapes.add(new RedCircle());
-        shapes.add(new RedSquare());
-        shapes.add(new RedTriangle());
+        shapes.add(new Circle(new Blue()));
+        shapes.add(new Square(new Blue()));
+        shapes.add(new Triangle(new Blue()));
+        shapes.add(new Circle(new Red()));
+        shapes.add(new Square(new Red()));
+        shapes.add(new Triangle(new Red()));
 
         for (Shape shape : shapes)
         {
